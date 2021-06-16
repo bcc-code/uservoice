@@ -28,8 +28,8 @@ import (
 var (
 	cspBase    = "base-uri 'self'"
 	cspDefault = "default-src 'self'"
-	cspStyle   = "style-src 'self' 'nonce-%[1]s' https://fonts.googleapis.com %[2]s"
-	cspScript  = "script-src 'self' 'nonce-%[1]s' https://www.google-analytics.com %[2]s"
+	cspStyle   = "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://widgets.bcc.no %[2]s"
+	cspScript  = "script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://widgets.bcc.no %[2]s"
 	cspFont    = "font-src 'self' https://fonts.gstatic.com data: %[2]s"
 	cspImage   = "img-src 'self' https: data: %[2]s"
 	cspObject  = "object-src 'none'"
