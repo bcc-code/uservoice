@@ -70,7 +70,7 @@ jobs:
           --set-env-vars DATABASE_URL="${{ secrets.DATABASE_URL }}" \
           --set-env-vars EMAIL_NOREPLY=noreply@bcc.no \
           --set-env-vars EMAIL_SMTP_HOST=smtp.office365.com \
-          --set-env-vars EMAIL_SMTP_PASSWORD="asd.f" \
+          --set-env-vars "^DELIM^EMAIL_SMTP_PASSWORD=${{ secrets.EMAIL_SMTP_PASSWORD }}" \
           --set-env-vars EMAIL_SMTP_PORT=587 \
           --set-env-vars EMAIL_SMTP_USERNAME=noreply@bcc.no \
           --set-env-vars HOST_DOMAIN=int-uservoice.bcc.no \
